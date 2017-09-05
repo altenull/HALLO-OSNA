@@ -27,4 +27,12 @@ dependencies {
     compile 'com.android.support:appcompat-v7:26.+'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     testCompile 'junit:junit:4.12'
+    compile 'com.tsengvn:typekit:1.0.1'
+    compile 'it.sephiroth.android.library.viewrevealanimator:view-reveal-animator:+'
+    compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+    compile 'com.github.castorflex.verticalviewpager:library:19.0.1'
+    compile 'io.github.francoiscampbell:circlelayout:0.3.0'
+    compile 'com.github.florent37:viewanimator:1.0.5'
+    compile 'com.github.florent37:diagonallayout:1.0.7'
+    compile 'com.flaviofaria:kenburnsview:1.0.7'
 }
