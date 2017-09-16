@@ -3,4 +3,20 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    <color name="osna_yellow">#FEC000</color>
+    <color name="osna_yellow_light">#CCBA85</color>
+
+    <color name="category_food">#A20000</color>
+    <color name="category_food_light">#CC8585</color>
+    <color name="category_leisure">#D76213</color>
+    <color name="category_leisure_light">#CCA185</color>
+    <color name="category_domitory">#00863D</color>
+    <color name="category_domitory_light">#85CCA5</color>
+    <color name="category_university">#2E75B6</color>
+    <color name="category_university_light">#85ABCC</color>
+    <color name="category_travel">#333F50</color>
+    <color name="category_travel_light">#85A1CC</color>
+    <color name="category_daily">#7030A0</color>
+    <color name="category_daily_light">#AD85CC</color>
 </resources>
