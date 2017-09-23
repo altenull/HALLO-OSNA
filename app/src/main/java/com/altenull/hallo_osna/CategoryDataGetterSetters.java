@@ -6,28 +6,25 @@ import java.util.ArrayList;
 
 public class CategoryDataGetterSetters {
     private static ArrayList<String> mPhotoFood = new ArrayList();
-    private static ArrayList<String> mPhotoTitleFood = new ArrayList();
-    private static ArrayList<String> mPhotoCommentFood = new ArrayList();
-
-    private static ArrayList<String> mPhotoLeisure = new ArrayList();
-    private static ArrayList<String> mPhotoTitleLeisure = new ArrayList();
-    private static ArrayList<String> mPhotoCommentLeisure = new ArrayList();
-
-    private static ArrayList<String> mPhotoDomitory = new ArrayList();
-    private static ArrayList<String> mPhotoTitleDomitory = new ArrayList();
-    private static ArrayList<String> mPhotoCommentDomitory = new ArrayList();
-
-    private static ArrayList<String> mPhotoUniversity = new ArrayList();
-    private static ArrayList<String> mPhotoTitleUniversity = new ArrayList();
-    private static ArrayList<String> mPhotoCommentUniversity = new ArrayList();
-
-    private static ArrayList<String> mPhotoTravel = new ArrayList();
-    private static ArrayList<String> mPhotoTitleTravel = new ArrayList();
-    private static ArrayList<String> mPhotoCommentTravel = new ArrayList();
-
     private static ArrayList<String> mPhotoDaily = new ArrayList();
+    private static ArrayList<String> mPhotoDomitory = new ArrayList();
+    private static ArrayList<String> mPhotoUniversity = new ArrayList();
+    private static ArrayList<String> mPhotoTravel = new ArrayList();
+    private static ArrayList<String> mPhotoLeisure = new ArrayList();
+
+    private static ArrayList<String> mPhotoTitleFood = new ArrayList();
     private static ArrayList<String> mPhotoTitleDaily = new ArrayList();
+    private static ArrayList<String> mPhotoTitleDomitory = new ArrayList();
+    private static ArrayList<String> mPhotoTitleUniversity = new ArrayList();
+    private static ArrayList<String> mPhotoTitleTravel = new ArrayList();
+    private static ArrayList<String> mPhotoTitleLeisure = new ArrayList();
+
+    private static ArrayList<String> mPhotoCommentFood = new ArrayList();
     private static ArrayList<String> mPhotoCommentDaily = new ArrayList();
+    private static ArrayList<String> mPhotoCommentDomitory = new ArrayList();
+    private static ArrayList<String> mPhotoCommentUniversity = new ArrayList();
+    private static ArrayList<String> mPhotoCommentTravel = new ArrayList();
+    private static ArrayList<String> mPhotoCommentLeisure = new ArrayList();
 
 
     public static void setPhoto(String paramPhoto, String paramCategoryTag) {
@@ -36,8 +33,8 @@ public class CategoryDataGetterSetters {
                 mPhotoFood.add(paramPhoto);
                 break;
 
-            case "#LEISURE":
-                mPhotoLeisure.add(paramPhoto);
+            case "#DAILY":
+                mPhotoDaily.add(paramPhoto);
                 break;
 
             case "#DOMITORY":
@@ -52,8 +49,8 @@ public class CategoryDataGetterSetters {
                 mPhotoTravel.add(paramPhoto);
                 break;
 
-            case "#DAILY":
-                mPhotoDaily.add(paramPhoto);
+            case "#LEISURE":
+                mPhotoLeisure.add(paramPhoto);
                 break;
 
             default:
@@ -68,8 +65,8 @@ public class CategoryDataGetterSetters {
                 mPhotoTitleFood.add(paramPhotoTitle);
                 break;
 
-            case "#LEISURE":
-                mPhotoTitleLeisure.add(paramPhotoTitle);
+            case "#DAILY":
+                mPhotoTitleDaily.add(paramPhotoTitle);
                 break;
 
             case "#DOMITORY":
@@ -84,8 +81,8 @@ public class CategoryDataGetterSetters {
                 mPhotoTitleTravel.add(paramPhotoTitle);
                 break;
 
-            case "#DAILY":
-                mPhotoTitleDaily.add(paramPhotoTitle);
+            case "#LEISURE":
+                mPhotoTitleLeisure.add(paramPhotoTitle);
                 break;
 
             default:
@@ -100,8 +97,8 @@ public class CategoryDataGetterSetters {
                 mPhotoCommentFood.add(paramPhotoComment);
                 break;
 
-            case "#LEISURE":
-                mPhotoCommentLeisure.add(paramPhotoComment);
+            case "#DAILY":
+                mPhotoCommentDaily.add(paramPhotoComment);
                 break;
 
             case "#DOMITORY":
@@ -116,8 +113,8 @@ public class CategoryDataGetterSetters {
                 mPhotoCommentTravel.add(paramPhotoComment);
                 break;
 
-            case "#DAILY":
-                mPhotoCommentDaily.add(paramPhotoComment);
+            case "#LEISURE":
+                mPhotoCommentLeisure.add(paramPhotoComment);
                 break;
 
             default:
@@ -131,8 +128,8 @@ public class CategoryDataGetterSetters {
             case "#FOOD":
                 return mPhotoFood;
 
-            case "#LEISURE":
-                return mPhotoLeisure;
+            case "#DAILY":
+                return mPhotoDaily;
 
             case "#DOMITORY":
                 return mPhotoDomitory;
@@ -143,8 +140,8 @@ public class CategoryDataGetterSetters {
             case "#TRAVEL":
                 return mPhotoTravel;
 
-            case "#DAILY":
-                return mPhotoDaily;
+            case "#LEISURE":
+                return mPhotoLeisure;
 
             default:
                 return null;
@@ -156,8 +153,8 @@ public class CategoryDataGetterSetters {
             case "#FOOD":
                 return mPhotoTitleFood;
 
-            case "#LEISURE":
-                return mPhotoTitleLeisure;
+            case "#DAILY":
+                return mPhotoTitleDaily;
 
             case "#DOMITORY":
                 return mPhotoTitleDomitory;
@@ -168,8 +165,8 @@ public class CategoryDataGetterSetters {
             case "#TRAVEL":
                 return mPhotoTitleTravel;
 
-            case "#DAILY":
-                return mPhotoTitleDaily;
+            case "#LEISURE":
+                return mPhotoTitleLeisure;
 
             default:
                 return null;
@@ -182,8 +179,8 @@ public class CategoryDataGetterSetters {
             case "#FOOD":
                 return mPhotoCommentFood;
 
-            case "#LEISURE":
-                return mPhotoCommentLeisure;
+            case "#DAILY":
+                return mPhotoCommentDaily;
 
             case "#DOMITORY":
                 return mPhotoCommentDomitory;
@@ -194,8 +191,8 @@ public class CategoryDataGetterSetters {
             case "#TRAVEL":
                 return mPhotoCommentTravel;
 
-            case "#DAILY":
-                return mPhotoCommentDaily;
+            case "#LEISURE":
+                return mPhotoCommentLeisure;
 
             default:
                 return null;
@@ -208,8 +205,8 @@ public class CategoryDataGetterSetters {
             case "#FOOD":
                 return mPhotoFood.size();
 
-            case "#LEISURE":
-                return mPhotoLeisure.size();
+            case "#DAILY":
+                return mPhotoDaily.size();
 
             case "#DOMITORY":
                 return mPhotoDomitory.size();
@@ -220,13 +217,11 @@ public class CategoryDataGetterSetters {
             case "#TRAVEL":
                 return mPhotoTravel.size();
 
-            case "#DAILY":
-                return mPhotoDaily.size();
+            case "#LEISURE":
+                return mPhotoLeisure.size();
 
             default:
                 return 0;
         }
     }
-
-
 }

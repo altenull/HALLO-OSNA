@@ -8,7 +8,6 @@ import android.os.Handler;
 import android.os.Message;
 import android.widget.ImageView;
 import android.widget.Toast;
-
 import com.github.florent37.viewanimator.ViewAnimator;
 
 
@@ -60,6 +59,4 @@ public class IntroActivity extends Activity {
             IntroActivity.this.changeMain();
         }
     }
-
-
 }

@@ -4,6 +4,7 @@
     android:layout_height="match_parent"
     android:background="@color/osna_yellow"
     xmlns:android="http://schemas.android.com/apk/res/android">
+
     <ImageView
         android:id="@id/intro_symbol"
         android:src="@drawable/symbol"

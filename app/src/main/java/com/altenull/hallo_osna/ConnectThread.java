@@ -11,7 +11,6 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import javax.xml.parsers.DocumentBuilderFactory;
-
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 
@@ -34,7 +33,7 @@ public class ConnectThread extends Thread {
 
         for(  ;  ;  ) {
             String inputLine;
-            String resultString;
+            String responseString;
 
             try {
                 HttpURLConnection conn = (HttpURLConnection)new URL(paramString).openConnection();
@@ -59,17 +58,15 @@ public class ConnectThread extends Thread {
 
                         in.close();
                     }
-
                     conn.disconnect();
                 }
-
-                resultString = XMLContentStringBuilder.toString();
+                responseString = XMLContentStringBuilder.toString();
             }
             catch (Exception localException) {
-                resultString = "Error2 - " + localException.getMessage();
+                responseString = "Error : " + localException.getMessage();
                 continue;
             }
-            return resultString;
+            return responseString;
         }
     }
 
@@ -98,11 +95,9 @@ public class ConnectThread extends Thread {
                     this.progressHandler.sendMessage(localMessage);
                     return;
                 }
-
                 Element localElement = (Element)studentNodeList.item(i);
                 DataHandler.getInstance().addData(localElement);
             }
-
         }
         else {
             localMessage.obj = "네트워크 연결이 불가능합니다.";
@@ -110,6 +105,4 @@ public class ConnectThread extends Thread {
             return;
         }
     }
-
-
 }

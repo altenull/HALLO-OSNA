@@ -10,8 +10,6 @@ public class DataHandler {
     private static volatile DataHandler uniqueInstance = null;
 
     protected int screenSize = 1;
-    protected float screenDensity;
-    protected double density;
     protected double imageScale;
 
     private DataGetterSetters data = null;
@@ -33,54 +31,46 @@ public class DataHandler {
     public void addData(Element paramElement) {
         this.data = new DataGetterSetters();
 
-        Element localElement1 = (Element)paramElement.getElementsByTagName("id").item(0);
+        String localStr1 = ((Element)paramElement.getElementsByTagName("representativePhoto").item(0)).getFirstChild().getNodeValue();
+        this.data.setRepresentativePhoto(localStr1);
 
-        String localStr1 = localElement1.getFirstChild().getNodeValue();
-        this.data.setID(localStr1);
+        String localStr2 = ((Element)paramElement.getElementsByTagName("name").item(0)).getFirstChild().getNodeValue();
+        this.data.setName(localStr2);
 
-        String localStr2 = localElement1.getAttribute("no");
-        this.data.setNo(localStr2);
+        String localStr3 = ((Element)paramElement.getElementsByTagName("englishName").item(0)).getFirstChild().getNodeValue();
+        this.data.setEnglishName(localStr3);
 
-        String localStr3 = ((Element)paramElement.getElementsByTagName("representativePhoto").item(0)).getFirstChild().getNodeValue();
-        this.data.setRepresentativePhoto(localStr3);
+        String localStr4 = ((Element)paramElement.getElementsByTagName("major").item(0)).getFirstChild().getNodeValue();
+        this.data.setMajor(localStr4);
 
-        String localStr4 = ((Element)paramElement.getElementsByTagName("name").item(0)).getFirstChild().getNodeValue();
-        this.data.setName(localStr4);
+        String localStr5 = ((Element)paramElement.getElementsByTagName("period").item(0)).getFirstChild().getNodeValue();
+        this.data.setPeriod(localStr5);
 
-        String localStr5 = ((Element)paramElement.getElementsByTagName("englishName").item(0)).getFirstChild().getNodeValue();
-        this.data.setEnglishName(localStr5);
-
-        String localStr6 = ((Element)paramElement.getElementsByTagName("major").item(0)).getFirstChild().getNodeValue();
-        this.data.setMajor(localStr6);
-
-        String localStr7 = ((Element)paramElement.getElementsByTagName("period").item(0)).getFirstChild().getNodeValue();
-        this.data.setPeriod(localStr7);
-
-        String localStr8 = ((Element)paramElement.getElementsByTagName("email").item(0)).getFirstChild().getNodeValue();
-        this.data.setEmail(localStr8);
+        String localStr6 = ((Element)paramElement.getElementsByTagName("email").item(0)).getFirstChild().getNodeValue();
+        this.data.setEmail(localStr6);
 
         NodeList photoNodeList = paramElement.getElementsByTagName("photo");
         for ( int i = 0;  i < photoNodeList.getLength();  i++ ) {
-            String localStr9 = ((Element)photoNodeList.item(i)).getFirstChild().getNodeValue();
-            this.data.setPhoto(localStr9);
+            String localStr7 = ((Element)photoNodeList.item(i)).getFirstChild().getNodeValue();
+            this.data.setPhoto(localStr7);
         }
 
         NodeList photoTitleNodeList = paramElement.getElementsByTagName("photoTitle");
         for ( int i = 0;  i < photoTitleNodeList.getLength();  i++ ) {
-            String localStr10 = ((Element)photoTitleNodeList.item(i)).getFirstChild().getNodeValue();
-            this.data.setPhotoTitle(localStr10);
+            String localStr8 = ((Element)photoTitleNodeList.item(i)).getFirstChild().getNodeValue();
+            this.data.setPhotoTitle(localStr8);
         }
 
         NodeList photoCommentNodeList = paramElement.getElementsByTagName("photoComment");
         for ( int i = 0;  i < photoCommentNodeList.getLength();  i++ ) {
-            String localStr11 = ((Element)photoCommentNodeList.item(i)).getFirstChild().getNodeValue();
-            this.data.setPhotoComment(localStr11);
+            String localStr9 = ((Element)photoCommentNodeList.item(i)).getFirstChild().getNodeValue();
+            this.data.setPhotoComment(localStr9);
         }
 
         NodeList photoMapNodeList = paramElement.getElementsByTagName("photoMap");
         for ( int i = 0;  i < photoMapNodeList.getLength();  i++ ) {
-            String localStr12 = ((Element)photoMapNodeList.item(i)).getFirstChild().getNodeValue();
-            this.data.setPhotoMap(localStr12);
+            String localStr10 = ((Element)photoMapNodeList.item(i)).getFirstChild().getNodeValue();
+            this.data.setPhotoMap(localStr10);
         }
 
         NodeList photoCategoryNodeList = paramElement.getElementsByTagName("photoCategory");
@@ -99,25 +89,10 @@ public class DataHandler {
         return;
     }
 
+    public void setDimension(double paramDpHeight) { this.imageScale = ((paramDpHeight - 116.0D) / paramDpHeight); }
+    public void setScreenSize(int paramScreenSize) { this.screenSize = paramScreenSize; }
+
     public ArrayList<DataGetterSetters> getData() { return this.dataList; }
-
-    public double getDensity() { return this.density; }
-
     public double getImageScale() { return this.imageScale; }
-
-    public float getScreenDensity() { return this.screenDensity; }
-
     public int getScreenSize() { return this.screenSize; }
-
-    public void saveDimensions(float paramDensity, double paramDpHeight) {
-        this.density = paramDensity;
-        this.imageScale = ((paramDpHeight - 116.0D) / paramDpHeight);
-    }
-
-    public void setScreenSize(int paramScreenSize, float paramDensity) {
-        this.screenSize = paramScreenSize;
-        this.screenDensity = paramDensity;
-    }
-
-
 }
