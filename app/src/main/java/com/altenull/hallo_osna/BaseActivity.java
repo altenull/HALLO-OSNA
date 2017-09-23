@@ -7,7 +7,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.animation.Animation;
-
 import com.nostra13.universalimageloader.cache.disc.naming.Md5FileNameGenerator;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
@@ -19,9 +18,13 @@ public abstract class BaseActivity extends Activity {
     protected ImageLoader imageLoader = ImageLoader.getInstance();
     protected Animation loadingAnimation;
     protected double imageScale;
+    protected int topMovement;
     protected int stageWidth;
     protected int stageHeight;
     protected float density;
+    protected final int RESULT_OK = -1;
+    protected final int SCREEN_SIZE_SMALL = 0;
+    protected final int SCREEN_SIZE_LARGE = 2;
 
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +38,8 @@ public abstract class BaseActivity extends Activity {
         this.stageWidth = localDisplayMetrics.widthPixels;
         this.stageHeight = localDisplayMetrics.heightPixels;
         this.density = localDisplayMetrics.density;
+
+        this.topMovement = (int)(50.0D * this.density);
     }
 
 
