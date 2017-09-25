@@ -50,10 +50,10 @@ public class HelpActivity extends BaseActivity {
         this.helpText3 = (TextView)findViewById(R.id.help_text_3);
         this.helpText4 = (TextView)findViewById(R.id.help_text_4);
 
-        this.helpText1.setText(("저희는 독일의 아름다운 도시 Osnabrück에서 교환학생으로 공부했습니다. 비록 몇 개월 되지 않는 짧은 시간이었지만, Osnabrück에서 보낸 시간은 눈부시게 아름답고 행복한 시간이었습니다." +
-                "\n모든 것이 획일화되고 경쟁적인 한국 사회를 벗어나 다른 세상을 경험해본 것은 삶에 중요한 터닝포인트가 되었습니다." +
-                "\n저마다의 방식대로 교환학생을 보낸 친구들의 이야기를 들어보세요. 그리고 정신없는 한국에서 미처 챙기지 못했던 자신의 목소리에 귀를 기울여 보세요." +
-                "\n훗날 Osnabrück를 떠올릴 때, 입가에 미소가 번질 수 있는 교환학생 생활을 보내기 바랍니다.").replace(" ", "\u00A0"));
+        this.helpText1.setText(("저희는 독일의 아름다운 도시 Osnabrück에서 교환학생 시절을 보냈습니다. 비록 몇 개월이 되지 않는 짧은 시간이었지만, Osnabrück에서 보낸 시간은 눈부시게 아름답고 행복한 시간이었습니다." +
+                "\n모든 것이 획일화되고 경쟁적인 한국 사회를 벗어나 새로운 세상에서 경험하고 느꼈던 모든 것들은 우리 인생의 터닝포인트가 되었습니다." +
+                "\n\"저마다의 방식대로 교환학생 시절을 기록한 친구들의 이야기를 들어보세요. 그리고 한국에서 미처 챙기지 못했던 자신의 목소리에 귀를 기울여 보세요.\"" +
+                "\nOsnabrück에서의 시간들이 인생의 소중한 한 페이지로 기억되길 바랍니다.").replace(" ", "\u00A0"));
 
         StringBuilder participantsStringBuilder = new StringBuilder("                       ");
         for ( int i = (DataHandler.getInstance().getData().size() - 3);  i >= 0;  i-- ) {
