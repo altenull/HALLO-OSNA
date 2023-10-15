@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Frame(center) -->
+    <FrameLayout
+        android:id="@+id/student_frame_center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.flaviofaria.kenburnsview.KenBurnsView
+            android:id="@+id/student_wall_picture"
+            android:src="@drawable/empty_frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="4dp"
+            android:adjustViewBounds="false" />
+
+        <TextView
+            android:id="@+id/student_english_name"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/student_english_name_label_height"
+            android:textColor="@android:color/black"
+            android:background="@drawable/triangle"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:ellipsize="end"
+            android:lines="1"
+            android:gravity="bottom"
+            android:paddingHorizontal="8dp"
+            android:paddingBottom="4dp" />
+    </FrameLayout>
+
+    <!-- Frame(left) -->
+    <RelativeLayout
+        android:id="@+id/student_frame_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white" />
+
+    <!-- Frame(right) -->
+    <RelativeLayout
+        android:id="@+id/student_frame_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white" />
+
+    <!-- Frame(top) -->
+    <RelativeLayout
+        android:id="@+id/student_frame_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white" />
+
+    <!-- Frame(bottom) -->
+    <RelativeLayout
+        android:id="@+id/student_frame_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white" />
+</RelativeLayout>

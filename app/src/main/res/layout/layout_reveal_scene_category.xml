@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--The `inAnimation` and `outAnimation` are fallback animations -->
+<it.sephiroth.android.library.viewrevealanimator.ViewRevealAnimator
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:measureAllChildren="true"
+    android:animateFirstView="true"
+    android:inAnimation="@anim/in_animation"
+    android:outAnimation="@anim/out_animation"
+    android:interpolator="@android:interpolator/linear_out_slow_in"
+    android:visibility="invisible">
+
+    <RelativeLayout
+        android:id="@+id/reveal_scene_category_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="@dimen/enormous_symbol_size"
+            android:layout_height="@dimen/enormous_symbol_size"
+            android:layout_centerInParent="true"
+            android:contentDescription="TODO"
+            android:src="@drawable/symbol" />
+    </RelativeLayout>
+</it.sephiroth.android.library.viewrevealanimator.ViewRevealAnimator>

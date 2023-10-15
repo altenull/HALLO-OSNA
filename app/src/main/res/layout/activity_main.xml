@@ -1,259 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    android:id="@id/main_layout"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#FFFFFF"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/tools"
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <it.sephiroth.android.library.viewrevealanimator.ViewRevealAnimator
-        android:id="@id/reveal_animator"
+    <data>
+        <import type="kotlin.jvm.functions.Function0" />
+        <import type="com.altenull.hallo_osna.viewmodel.MainMode" />
+
+        <variable
+            name="mainMode"
+            type="MainMode" />
+        <variable
+            name="switchMainMode"
+            type="Function0" />
+    </data>
+
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#00000000"
-        android:measureAllChildren="true"
-        android:animateFirstView="true"
-        android:inAnimation="@anim/in_animation"
-        android:outAnimation="@anim/out_animation"
-        android:interpolator="@android:interpolator/linear_out_slow_in"
-        app:vra_hideBeforeReveal="false">
-
-        <RelativeLayout
-            android:id="@id/reveal_layout_main"
+        android:background="@android:color/white"
+        tools:context=".MainActivity">
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/fragment_main_content"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#00000000">
+            android:layout_height="match_parent" />
 
-            <fr.castorflex.android.verticalviewpager.VerticalViewPager
-                android:id="@id/vertical_viewpager"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="#00000000" />
+        <include
+            android:id="@+id/layout_main_header"
+            layout="@layout/layout_main_header"
+            bind:mainMode="@{mainMode}"
+            bind:switchMainMode="@{switchMainMode}" />
 
-            <RelativeLayout
-                android:id="@id/slide_layout"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@color/osna_yellow"
-                android:orientation="vertical"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentStart="true">
+        <!-- `layout_reveal_reveal_scene_student` will be shown when user clicks a student in story mode -->
+        <include
+            android:id="@+id/layout_reveal_scene_student"
+            layout="@layout/layout_reveal_scene_student" />
 
-                <ImageView
-                    android:src="@drawable/symbol"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:layout_centerVertical="true"/>
-            </RelativeLayout>
-
-            <ImageView
-                android:id="@id/logo_white"
-                android:src="@drawable/logo_white"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="#00000000" />
-
-            <ImageButton
-                android:id="@id/logo_black"
-                android:src="@drawable/logo_black"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="#00000000" />
-
-            <ImageView
-                android:id="@id/help_white"
-                android:src="@drawable/help_white"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="#00000000"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentRight="true" />
-
-            <ImageButton
-                android:id="@id/help_black"
-                android:src="@drawable/help_black"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="#00000000"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentRight="true" />
-
-            <ImageButton
-                android:id="@id/ic_story"
-                android:src="@drawable/ic_story"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="#00000000"
-                android:layout_alignParentTop="true"
-                android:layout_toLeftOf="@id/help_black" />
-
-            <ImageButton
-                android:id="@id/ic_category"
-                android:src="@drawable/ic_category"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="#00000000"
-                android:layout_alignParentTop="true"
-                android:layout_toLeftOf="@id/help_black" />
-
-            <RelativeLayout
-                android:id="@id/vertical_scrollbar"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/vertical_scrollbar" />
-
-            <io.github.francoiscampbell.circlelayout.CircleLayout
-                xmlns:cl="http://schemas.android.com/apk/res-auto"
-                android:id="@id/category_layout"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="#00000000"
-                android:layout_marginTop="50.0dip"
-                cl:cl_radius="fitsLargestChild"
-                cl:cl_angleOffset="90"
-                cl:cl_direction="clockwise"
-                cl:cl_centerView="@id/centerview">
-
-                <ImageView
-                    android:id="@id/centerview"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-
-                <ImageButton
-                    android:id="@id/category_food"
-                    android:src="@drawable/category_food"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="#00000000" />
-
-                <ImageButton
-                    android:id="@id/category_daily"
-                    android:src="@drawable/category_daily"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="#00000000" />
-
-                <ImageButton
-                    android:id="@id/category_domitory"
-                    android:src="@drawable/category_domitory"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="#00000000" />
-
-                <ImageButton
-                    android:id="@id/category_university"
-                    android:src="@drawable/category_university"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="#00000000" />
-
-                <ImageButton
-                    android:id="@id/category_travel"
-                    android:src="@drawable/category_travel"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="#00000000" />
-
-                <ImageButton
-                    android:id="@id/category_leisure"
-                    android:src="@drawable/category_leisure"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="#00000000" />
-            </io.github.francoiscampbell.circlelayout.CircleLayout>
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:id="@id/reveal_layout_1"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/category_food_light">
-
-            <ImageView
-                android:src="@drawable/symbol"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_centerVertical="true"
-                android:layout_gravity="center_horizontal|center_vertical" />
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:id="@id/reveal_layout_2"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/category_daily_light">
-
-            <ImageView
-                android:src="@drawable/symbol"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_centerVertical="true"
-                android:layout_gravity="center_horizontal|center_vertical" />
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:id="@id/reveal_layout_3"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/category_domitory_light">
-
-            <ImageView
-                android:src="@drawable/symbol"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_centerVertical="true"
-                android:layout_gravity="center_horizontal|center_vertical" />
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:id="@id/reveal_layout_4"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/category_university_light">
-
-            <ImageView
-                android:src="@drawable/symbol"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_centerVertical="true"
-                android:layout_gravity="center_horizontal|center_vertical" />
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:id="@id/reveal_layout_5"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/category_travel_light">
-
-            <ImageView
-                android:src="@drawable/symbol"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_centerVertical="true"
-                android:layout_gravity="center_horizontal|center_vertical" />
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:id="@id/reveal_layout_6"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/category_leisure_light">
-
-            <ImageView
-                android:src="@drawable/symbol"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_centerVertical="true"
-                android:layout_gravity="center_horizontal|center_vertical" />
-        </RelativeLayout>
-    </it.sephiroth.android.library.viewrevealanimator.ViewRevealAnimator>
-</RelativeLayout>
+        <!-- `layout_reveal_scene_category` will be shown when user clicks a category in category mode -->
+        <include
+            android:id="@+id/layout_reveal_scene_category"
+            layout="@layout/layout_reveal_scene_category" />
+    </FrameLayout>
+</layout>

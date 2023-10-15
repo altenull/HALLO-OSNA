@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="header_height">64dp</dimen>
+
+    <dimen name="enormous_symbol_size">200dp</dimen>
+
+    <!-- `student_frame_x` is used as minimum -->
+    <dimen name="student_frame_x">28dp</dimen>
+    <dimen name="student_frame_y">64dp</dimen>
+
+    <dimen name="student_english_name_label_height">54dp</dimen>
+
+    <dimen name="category_circle_layout_radius">120dp</dimen>
+
+    <!-- The aspect-ratio of category symbol is 1x1.36 -->
+    <dimen name="category_symbol_width">100dp</dimen>
+    <dimen name="category_symbol_height">136dp</dimen>
+
+    <dimen name="picture_title_margin_top">20dp</dimen>
+    <dimen name="picture_comment_margin_bottom">8dp</dimen>
+</resources>

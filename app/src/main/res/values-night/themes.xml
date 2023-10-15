@@ -1,0 +1,9 @@
+<resources  xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.HALLOOSNA" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:fontFamily">@font/seoul_namsan</item>
+
+        <item name="android:windowSplashScreenBackground" tools:targetApi="S">@color/osna_yellow</item>
+        <item name="android:windowSplashScreenAnimatedIcon" tools:targetApi="S">@android:color/transparent</item>
+    </style>
+</resources>

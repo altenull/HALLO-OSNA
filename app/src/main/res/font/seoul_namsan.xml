@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<font-family xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- Normal (using medium) -->
+    <font
+        android:font="@font/seoul_namsan_medium"
+        android:fontStyle="normal"
+        android:fontWeight="400"
+        app:font="@font/seoul_namsan_medium"
+        app:fontStyle="normal"
+        app:fontWeight="400" />
+
+    <!-- Bold (using extra bold) -->
+    <font
+        android:font="@font/seoul_namsan_extrabold"
+        android:fontStyle="normal"
+        android:fontWeight="700"
+        app:font="@font/seoul_namsan_extrabold"
+        app:fontStyle="normal"
+        app:fontWeight="700" />
+</font-family>

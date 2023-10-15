@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/osna_yellow"
+        tools:context=".SplashActivity">
+
+        <ImageView
+            android:id="@+id/splash_symbol"
+            android:layout_width="@dimen/enormous_symbol_size"
+            android:layout_height="@dimen/enormous_symbol_size"
+            android:layout_centerInParent="true"
+            android:contentDescription="TODO"
+            android:src="@drawable/symbol" />
+    </RelativeLayout>
+</layout>

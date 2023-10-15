@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="android.view.View" />
+        <import type="kotlin.jvm.functions.Function0" />
+        <import type="com.altenull.hallo_osna.viewmodel.MainMode" />
+
+        <variable
+            name="mainMode"
+            type="MainMode" />
+        <variable
+            name="switchMainMode"
+            type="Function0" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/header_height">
+
+        <ImageButton
+            android:id="@+id/logo_black"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:background="@android:color/transparent"
+            android:contentDescription="TODO"
+            app:srcCompat="@drawable/logo_black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <FrameLayout
+            android:id="@+id/main_mode_button_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/ic_help_black">
+
+            <!-- Story Button -->
+            <ImageButton
+                android:id="@+id/ic_story"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:contentDescription="TODO"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/ic_story"
+                android:onClick="@{() -> switchMainMode.invoke()}"
+                android:visibility="@{mainMode == MainMode.CATEGORY ? View.VISIBLE : View.INVISIBLE}" />
+
+            <!-- Category Button -->
+            <ImageButton
+                android:id="@+id/ic_category"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:contentDescription="TODO"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/ic_category"
+                android:onClick="@{() -> switchMainMode.invoke()}"
+                android:visibility="@{mainMode == MainMode.STORY ? View.VISIBLE : View.INVISIBLE}" />
+        </FrameLayout>
+
+        <ImageButton
+            android:id="@+id/ic_help_black"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:background="@android:color/transparent"
+            android:contentDescription="TODO"
+            app:srcCompat="@drawable/ic_help_black"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

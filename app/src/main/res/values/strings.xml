@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">HALLO-OSNA</string>
+    <string name="scene_student_english_name">(%1$s)</string>
+    <string name="scene_student_period">%1$s ~ %2$s</string>
+
+    <string name="picture_comment">\" %1$s \"</string>
+
+    <string name="help_body">"저희는 독일의 아름다운 도시 Osnabrück에서 교환학생 시절을 보냈습니다. 비록 몇 개월이 되지 않는 짧은 시간이었지만, Osnabrück에서 보낸 시간은 눈부시게 아름답고 행복한 시간이었습니다.
+
+모든 것이 획일화되고 경쟁적인 한국 사회를 벗어나 새로운 세상에서 경험하고 느꼈던 모든 것들은 우리 인생의 터닝포인트가 되었습니다.
+
+"저마다의 방식대로 교환학생 시절을 기록한 친구들의 이야기를 들어보세요. 그리고 한국에서 미처 챙기지 못했던 자신의 목소리에 귀를 기울여 보세요."
+
+Osnabrück에서의 시간들이 인생의 소중한 한 페이지로 기억되길 바랍니다."</string>
+    <string name="help_footer">Copyright © 2017 김헌영. All Rights Reserved.\nHALLO-OSNA 참여 문의 altenull@gmail.com\nDevelop 김헌영 altenull@gmail.com\nDesign 김다미 o0oall33@gmail.com</string>
+    <string name="help_thanks_to">Thanks to</string>
 </resources>
