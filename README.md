@@ -2,8 +2,6 @@
 
 ![API](https://img.shields.io/badge/API-28%2B-green.svg)
 
-<p>HALLO-OSNA for Osnabrück 교환학생</p>
-
 <a href="https://play.google.com/store/apps/details?id=com.altenull.hallo_osna">
   <img
     alt="Get it on Google Play"
