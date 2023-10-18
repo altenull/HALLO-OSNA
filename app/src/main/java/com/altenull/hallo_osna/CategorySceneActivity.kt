@@ -50,6 +50,13 @@ class CategorySceneActivity : AppCompatActivity(),
 
     private fun introduceCategory() {
         window.decorView.setBackgroundColor(ContextCompat.getColor(this, category.lightColor))
+
+        /**
+         * Set background color of top & bottom layouts to light color in case of overflowing image to layouts.
+         */
+        binding.sceneCategoryTopLayout.setBackgroundColor(ContextCompat.getColor(this, category.lightColor))
+        binding.sceneCategoryBottomLayout.setBackgroundColor(ContextCompat.getColor(this, category.lightColor))
+
         binding.sceneCategorySymbol.load(category.symbol) {
             crossfade(true)
         }

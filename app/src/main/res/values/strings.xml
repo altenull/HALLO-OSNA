@@ -14,4 +14,14 @@
 Osnabrück에서의 시간들이 인생의 소중한 한 페이지로 기억되길 바랍니다."</string>
     <string name="help_footer">Copyright © 2017 김헌영. All Rights Reserved.\nHALLO-OSNA 참여 문의 altenull@gmail.com\nDevelop 김헌영 altenull@gmail.com\nDesign 김다미 o0oall33@gmail.com</string>
     <string name="help_thanks_to">Thanks to</string>
+
+    <!-- for `android:contentDescription` attribute -->
+    <string name="content_description_hallo_osna_logo">This is HALLO OSNA logo</string>
+    <string name="content_description_hallo_osna_symbol">This is HALLO OSNA symbol</string>
+    <string name="content_description_category_mode_button">This is category mode button</string>
+    <string name="content_description_story_mode_button">This is story mode button</string>
+    <string name="content_description_help_button">This is help button</string>
+    <string name="content_description_student_picture">This is student picture</string>
+    <string name="content_description_category_picture">This is category picture</string>
+    <string name="content_description_category_symbol">This is category symbol</string>
 </resources>

@@ -23,7 +23,7 @@
                 android:adjustViewBounds="true"
                 android:scaleType="fitXY"
                 android:background="@android:color/transparent"
-                android:contentDescription="TODO"
+                android:contentDescription="@string/content_description_hallo_osna_logo"
                 android:src="@drawable/logo_yellow"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -44,7 +44,7 @@
                 android:adjustViewBounds="true"
                 android:scaleType="fitXY"
                 android:background="@android:color/transparent"
-                android:contentDescription="TODO"
+                android:contentDescription="@string/content_description_help_button"
                 android:src="@drawable/ic_help_yellow"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -104,7 +104,7 @@
                 android:ellipsize="end"
                 android:lines="1"
                 android:textColor="@color/osna_yellow"
-                android:textSize="15sp"
+                android:textSize="13sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/scene_student_name" />
@@ -116,7 +116,7 @@
                 android:ellipsize="end"
                 android:lines="1"
                 android:textColor="@color/osna_yellow"
-                android:textSize="12sp"
+                android:textSize="11sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/scene_student_major" />
@@ -150,6 +150,7 @@
             android:id="@+id/scene_student_title_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@android:color/black"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
@@ -174,6 +175,8 @@
             android:id="@+id/scene_student_comment_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:paddingVertical="@dimen/picture_comment_padding_top_bottom"
+            android:background="@android:color/black"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent">

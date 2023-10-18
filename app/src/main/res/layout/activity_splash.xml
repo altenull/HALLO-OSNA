@@ -12,7 +12,7 @@
             android:layout_width="@dimen/enormous_symbol_size"
             android:layout_height="@dimen/enormous_symbol_size"
             android:layout_centerInParent="true"
-            android:contentDescription="TODO"
+            android:contentDescription="@string/content_description_hallo_osna_logo"
             android:src="@drawable/symbol" />
     </RelativeLayout>
 </layout>

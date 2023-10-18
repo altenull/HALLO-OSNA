@@ -17,5 +17,5 @@
     <dimen name="category_symbol_height">136dp</dimen>
 
     <dimen name="picture_title_margin_top">20dp</dimen>
-    <dimen name="picture_comment_margin_bottom">8dp</dimen>
+    <dimen name="picture_comment_padding_top_bottom">8dp</dimen>
 </resources>

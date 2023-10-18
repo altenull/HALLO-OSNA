@@ -11,7 +11,7 @@
         android:adjustViewBounds="true"
         android:scaleType="fitXY"
         android:layout_gravity="center"
-        android:contentDescription="TODO:" />
+        android:contentDescription="@string/content_description_student_picture" />
 
     <ProgressBar
         android:id="@+id/student_progress_bar"
